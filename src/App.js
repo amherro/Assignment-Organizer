@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
+import AssignmentCalendar from './AssignmentCalendar'
+import Header from './Header'
 
 const App = () => {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Header />
+      <AssignmentCalendar />
     </div>
   )
 }
