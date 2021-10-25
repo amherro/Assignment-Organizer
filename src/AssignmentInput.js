@@ -1,6 +1,7 @@
 import React from 'react'
 
-const AssignmentInput = () => {
+const AssignmentInput = ({ assignments, addAssignments }) => {
+
     return (
         <form>
             <label>Please enter a new assignment...</label>
