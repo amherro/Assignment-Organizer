@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Button = ({ text, color, addDate, toggleDateInput }) => {
+const Button = ({ text, color }) => {
     return (
-        <button style={{backgroundColor: color}} onClick={toggleDateInput}>
+        <button style={{backgroundColor: color}} >
             {text}
         </button>
     )
