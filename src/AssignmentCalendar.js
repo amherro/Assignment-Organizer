@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid';
 import Button from './Button';
 import DatesInput from './DatesInput';
 import DatesDisplay from './DatesDisplay';
@@ -7,7 +8,10 @@ const AssignmentCalendar = () => {
     const [dates, setDates] = useState([]);
     
     const addDate = (date) => {
-        setDates(dates.concat(date))
+        setDates(dates.concat({
+            id: uuidv4(),
+            date,
+        }))
     }
     
 

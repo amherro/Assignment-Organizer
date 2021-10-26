@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Button from './Button'
 
-const DatesInput = ({ dates, addDate }) => {
+const DatesInput = ({ addDate }) => {
     const [ date, setDate ] = useState('')
     
     const typeInDate = (e) => {

@@ -1,33 +1,36 @@
 import React, { useState } from 'react'
 import Button from './Button';
 
-const AssignmentInput = ({ assignments, addAssignment }) => {
+const AssignmentInput = ({ addAssignment }) => {
     const [assignment, setAssignment] = useState({
         name: '',
-        class: '',
+        subject: '',
     });
     const handleAddName = (e) => {
         setAssignment({
             name: e.target.value,
-            class: assignment.class,
+            subject: assignment.subject,
         })
     }
-    const handleAddClass = (e) => {
+    const handleAddsubject = (e) => {
         setAssignment({
             name: assignment.name,
-            class: e.target.value,
+            subject: e.target.value,
         })
     }
     const submitNewAssignment = (e) => {
         e.preventDefault();
-        addAssignment(assignment)
-        setAssignment('')
+        addAssignment(assignment);
+        setAssignment({
+            name: '',
+            subject: '',
+        });
     }
     return (
         <form onSubmit={submitNewAssignment}>
             <label>Please enter a new assignment...</label>
             <input type='text' placeholder='Assignment name' value={assignment.name} onChange={handleAddName}></input>
-            <input type='text' placeholder='Class' value={assignment.class} onChange={handleAddClass}></input>
+            <input type='text' placeholder='Subject' value={assignment.subject} onChange={handleAddsubject}></input>
             <Button text='Submit' />
         </form>
     )
