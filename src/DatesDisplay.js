@@ -8,7 +8,7 @@ const DatesDisplay = ({ dates }) => {
             {dates.map(({ date, id }) => {
                 return (
                     <div key={id}>
-                        <Date date={date}/>
+                        <Date date={date} />
                     </div>
                 )
             })}

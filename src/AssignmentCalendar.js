@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
-import Button from './Button';
 import DatesInput from './DatesInput';
 import DatesDisplay from './DatesDisplay';
 
 const AssignmentCalendar = () => {
     const [dates, setDates] = useState([]);
+    const [showDateInput, setShowDateInput] = useState(false);
     
     const addDate = (date) => {
         setDates(dates.concat({
@@ -13,17 +13,17 @@ const AssignmentCalendar = () => {
             date,
         }))
     }
+    const toggleDateInput = () => {
+        setShowDateInput(!showDateInput)
+    }
     
 
     return (
         <main className="main-display">
             <h3>Assignment Calendar</h3>
             <h4 className="dates-Title">Dates</h4>
-            <Button 
-                text='Add Date' 
-                color='green'
-            />
-            <DatesInput dates={dates} addDate={addDate}/>
+            <button onClick={toggleDateInput}>Add Date</button>
+            {showDateInput && <DatesInput dates={dates} addDate={addDate}/>}
             <DatesDisplay dates={dates} />
         </main>
     )
