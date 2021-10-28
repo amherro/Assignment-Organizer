@@ -29,8 +29,8 @@ const AssignmentInput = ({ addAssignment }) => {
     return (
         <form onSubmit={submitNewAssignment}>
             <label>Please enter a new assignment...</label>
-            <input type='text' placeholder='Assignment name' value={assignment.name} onChange={handleAddName}></input>
-            <input type='text' placeholder='Subject' value={assignment.subject} onChange={handleAddsubject}></input>
+            <input type='text' maxLength='50' placeholder='Assignment name' value={assignment.name} onChange={handleAddName}></input>
+            <input type='text' maxLength='50' placeholder='Subject' value={assignment.subject} onChange={handleAddsubject}></input>
             <Button text='Submit' />
         </form>
     )

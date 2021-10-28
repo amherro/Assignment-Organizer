@@ -1,6 +1,6 @@
 import React from 'react'
-import AssignmentCalendar from './AssignmentCalendar'
-import Header from './Header'
+import AssignmentCalendar from './Components/AssignmentCalendar'
+import Header from './Components/Header'
 
 const App = () => {
   return (
