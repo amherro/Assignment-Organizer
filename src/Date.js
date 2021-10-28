@@ -10,12 +10,12 @@ const Date = ({ date }) => {
     const toggleAssignmentInput = () => {
         setShowAddAssignment(!showAddAssignment);
     }
-
+    // Fix showAddAssignment so it only toggles the input and not the display of the assignments
     return (
         <div>
             <h5>{date} <button onClick={toggleAssignmentInput}>Add Assignment</button></h5>
             <div className='assignment-display'>
-                {showAddAssignment && <Assignments assignments={assignments} addAssignment={addAssignment} />}
+                <Assignments assignments={assignments} addAssignment={addAssignment} showAddAssignment={showAddAssignment} />
             </div>
         </div>
     )

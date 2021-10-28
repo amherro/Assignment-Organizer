@@ -2,10 +2,10 @@ import React from 'react'
 import AssignmentInput from './AssignmentInput';
 import AssignmentDisplay from './AssignmentDisplay';
 
-const Assignments = ({ assignments, addAssignment }) => {
+const Assignments = ({ assignments, addAssignment, showAddAssignment }) => {
     return (
         <div>
-            <AssignmentInput addAssignment={addAssignment} />
+            {showAddAssignment && <AssignmentInput addAssignment={addAssignment} />}
             <AssignmentDisplay assignments={assignments} />
         </div>
     )
