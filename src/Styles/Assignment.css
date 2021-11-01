@@ -1,11 +1,19 @@
-.assignment-card {
+.assignment-section {
     width: 500px;
     margin: 20px 0px;
+    display: flex;
+    align-items: center;
+}
+.assignment-card {
+    width: 350px;
+    height: 120px;
+    margin-left: 40px;
     background-color: rgb(238, 238, 238);
+    font-family: 'Apple Chancery', 'Arial', 'Times New Roman';
 }
 .top-of-card {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: baseline;
 }
 .assignment-names {
@@ -13,6 +21,11 @@
 }
 .complete-btn {
     margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    color:rgb(172, 172, 172);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 .delete-btn {
     margin-right: 20px;
