@@ -11,12 +11,12 @@ const AssignmentCalendar = () => {
         setDates(dates.concat({
             id: uuidv4(),
             date,
+            isComplete: false
         }))
     }
     const toggleDateInput = () => {
         setShowDateInput(!showDateInput)
     }
-    
 
     return (
         <main className="main-display">

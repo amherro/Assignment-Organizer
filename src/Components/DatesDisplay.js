@@ -2,7 +2,7 @@ import React from 'react'
 import Date from './Date';
 
 
-const DatesDisplay = ({ dates }) => {
+const DatesDisplay = ({ dates, handleSetComplete }) => {
     return (
         <div className='assignment-display'>
             {dates.map(({ date, id }) => {

@@ -5,19 +5,27 @@
     align-items: center;
 }
 .assignment-card {
-    width: 350px;
-    height: 120px;
+    width: 270px;
+    height: 70px;
+    line-height: 0px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin: 5px;
     margin-left: 40px;
     background-color: rgb(238, 238, 238);
     font-family: 'Apple Chancery', 'Arial', 'Times New Roman';
 }
 .top-of-card {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: baseline;
 }
 .assignment-names {
     font-size: 20px;
+    margin-left: 10px;
 }
 .complete-btn {
     margin-left: 20px;
@@ -27,9 +35,16 @@
     background-color: rgb(255, 255, 255);
     cursor: pointer;
 }
+.completed-btn-success {
+    color: green;
+}
+.complete-card-success {
+    opacity: 0.4;
+}
 .delete-btn {
-    margin-right: 20px;
+    margin-right: 0px;
 }
 .assignment-date {
-    text-align: center;
+    text-align: left;
+    margin-left: 5px;
 }

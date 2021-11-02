@@ -3,13 +3,18 @@ import { v4 as uuidv4 } from 'uuid';
 import Assignment from './Assignment';
 
 const AssignmentDisplay = ({ assignments }) => {
-
+    
     return (
         <div>
             {assignments.map((assignment) => {
                 return (
                     <div key={uuidv4()}>
-                        <Assignment name={assignment.name} subject={assignment.subject}/>
+                        <Assignment 
+                            assignment={assignment}
+                            name={assignment.name} 
+                            subject={assignment.subject} 
+                            
+                        />
                     </div>
                 )
             })}
