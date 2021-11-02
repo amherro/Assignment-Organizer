@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../Styles/Assignment.css'
 import { FaTimes, FaCheckCircle } from 'react-icons/fa'
 
-const Assignment = ({ name, subject }) => {
+const Assignment = ({ name, subject, id, deleteAssignment }) => {
     const [complete, setComplete] = useState(false)
     const handleSetComplete = () => {
         setComplete(!complete)
@@ -25,6 +25,7 @@ const Assignment = ({ name, subject }) => {
                 <FaTimes 
                         style={{color: 'red', cursor: 'pointer'}} 
                         className='delete-btn'
+                        onClick={() => deleteAssignment(id)}
                     />
             </div>
         </div>

@@ -11,12 +11,16 @@ const Date = ({ date }) => {
     const toggleAssignmentInput = () => {
         setShowAddAssignment(!showAddAssignment);
     }
+    const deleteAssignment = (id) => {
+        console.log('delete', id)
+        setAssignments(assignments.filter((assignment) => assignment.id !== id))
+    }
 
     return (
         <div>
             <h5>{date} <button onClick={toggleAssignmentInput}>Add Assignment</button></h5>
             <div className='assignment-display'>
-                <Assignments assignments={assignments} addAssignment={addAssignment} showAddAssignment={showAddAssignment} />
+                <Assignments assignments={assignments} addAssignment={addAssignment} showAddAssignment={showAddAssignment} deleteAssignment={deleteAssignment} />
             </div>
         </div>
     )
