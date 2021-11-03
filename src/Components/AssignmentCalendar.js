@@ -11,11 +11,13 @@ const AssignmentCalendar = () => {
         setDates(dates.concat({
             id: uuidv4(),
             date,
-            isComplete: false
         }))
     }
     const toggleDateInput = () => {
         setShowDateInput(!showDateInput)
+    }
+    const deleteDate = (id) => {
+        setDates(dates.filter((date) => date.id !== id))
     }
 
     return (
@@ -24,7 +26,7 @@ const AssignmentCalendar = () => {
             <h4 className="dates-Title">Dates</h4>
             <button onClick={toggleDateInput}>Add Date</button>
             {showDateInput && <DatesInput dates={dates} addDate={addDate}/>}
-            <DatesDisplay dates={dates} />
+            <DatesDisplay dates={dates} deleteDate={deleteDate} />
         </main>
     )
 }

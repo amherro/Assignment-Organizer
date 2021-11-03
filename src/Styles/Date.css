@@ -1,0 +1,14 @@
+.date-section {
+    display: flex;
+    align-items: baseline;
+}
+.date-delete-btn {
+    margin: 0px 20px;
+}
+.add-assignment-section {
+    display: flex;
+    flex-direction: column;
+}
+.add-assignment-btn {
+    width: 120px;
+}
