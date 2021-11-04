@@ -32,8 +32,4 @@ const Assignment = ({ name, subject, id, deleteAssignment }) => {
     )
 }
 
-// const completeStyle = {
-//     color: green
-// }
-
 export default Assignment

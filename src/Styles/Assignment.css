@@ -1,5 +1,4 @@
 .assignment-section {
-    width: 500px;
     margin: 20px 0px;
     display: flex;
     align-items: center;
@@ -7,21 +6,18 @@
 .assignment-card {
     width: 270px;
     height: 70px;
-    line-height: 0px;
+    line-height: 30px;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 10px;
     margin: 5px;
-    margin-left: 40px;
+    margin-left: 0px;
     background-color: rgb(238, 238, 238);
     font-family: 'Apple Chancery', 'Arial', 'Times New Roman';
 }
 .top-of-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: baseline;
+    margin-left: 20px;
 }
 .assignment-names {
     font-size: 20px;
@@ -34,6 +30,7 @@
     color:rgb(172, 172, 172);
     background-color: rgb(255, 255, 255);
     cursor: pointer;
+    margin-right: 20px;
 }
 .completed-btn-success {
     color: green;
@@ -42,7 +39,8 @@
     opacity: 0.4;
 }
 .delete-btn {
-    margin-right: 0px;
+    margin-right: 10px;
+    margin-top: 5px;
 }
 .assignment-date {
     text-align: left;

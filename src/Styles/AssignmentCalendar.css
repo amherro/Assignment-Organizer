@@ -1,0 +1,35 @@
+.calendar-title {
+    text-align: center;
+    font-size: 28px;
+}
+.content-display {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.date-title-btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.date-title-btn {
+    display: flex;
+}
+.dates-title {
+    grid-column: 1;
+    grid-row: 1;
+    margin-right: 20px;
+    font-size: 23px;
+}
+.add-date-btn {
+    grid-column: 1;
+    grid-row: 1;
+}
+/* .main-display {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+.content-display {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+ */

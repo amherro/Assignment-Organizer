@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Button from './Button'
+import '../Styles/DatesInput.css'
 
 const DatesInput = ({ addDate }) => {
     const [ date, setDate ] = useState('')

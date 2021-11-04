@@ -1,14 +1,32 @@
 .date-section {
     display: flex;
-    align-items: baseline;
-}
-.date-delete-btn {
-    margin: 0px 20px;
-}
-.add-assignment-section {
-    display: flex;
     flex-direction: column;
+    margin-top: 20px;
+}
+.add-assignment-top {
+    display: flex;
+    margin: 0px;
+} 
+.date-delete-btn {
+    margin-right: 55px;
 }
 .add-assignment-btn {
-    width: 120px;
+    margin-left: 45px;
 }
+.flip-arrow-down {
+    animation: flipArrowUp 0.5s forwards;
+}
+.flip-arrow-up {
+    animation: flipArrowDown 0.5s forwards;
+}
+
+@keyframes flipArrowDown {
+    0% {transform:rotateX(0deg);}
+    100% {transform: rotateX(180deg);}
+}
+@keyframes flipArrowUp {
+    0% {transform:rotateX(180deg);}
+    100% {transform: rotateX(0deg);}
+}
+
+

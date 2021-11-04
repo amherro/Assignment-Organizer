@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Assignments from './Assignments';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaAngleDown } from 'react-icons/fa';
 import '../Styles/Date.css';
 
 const Date = ({ date, id, deleteDate }) => {
@@ -10,8 +10,18 @@ const Date = ({ date, id, deleteDate }) => {
     const addAssignment = (assignment) => {
         setAssignments(assignments.concat(assignment))
     }
+    const toggleOpenInput = () => {
+        if(showAddAssignment) {
+            document.querySelector('.add-assignment-btn').classList.add('flip-arrow-down')
+            document.querySelector('.add-assignment-btn').classList.remove('flip-arrow-up')
+        } else {
+            document.querySelector('.add-assignment-btn').classList.add('flip-arrow-up')
+            document.querySelector('.add-assignment-btn').classList.remove('flip-arrow-down')
+        }
+    }
     const toggleAssignmentInput = () => {
         setShowAddAssignment(!showAddAssignment);
+        toggleOpenInput();
     }
     const deleteAssignment = (id) => {
         setAssignments(assignments.filter((assignment) => assignment.id !== id))
@@ -19,13 +29,13 @@ const Date = ({ date, id, deleteDate }) => {
 
     return (
         <div className='date-section'>
-            <FaTimes style={{color:'red', cursor:'pointer'}} onClick={() => deleteDate(id)} className='date-delete-btn' />
-            <div className='add-assignment-section'>
+            <div className='add-assignment-top'>
+                <FaTimes style={{color:'red', cursor:'pointer'}} onClick={() => deleteDate(id)} className='date-delete-btn' />
                 <h5>{date}</h5>
-                <button className='add-assignment-btn' onClick={toggleAssignmentInput}>Add Assignment</button>
-                <div className='assignment-display'>
-                    <Assignments assignments={assignments} addAssignment={addAssignment} showAddAssignment={showAddAssignment} deleteAssignment={deleteAssignment} />
-                </div>
+                <FaAngleDown className='add-assignment-btn' onClick={toggleAssignmentInput}></FaAngleDown>
+            </div>
+            <div className='assignment-display'>
+                <Assignments assignments={assignments} addAssignment={addAssignment} showAddAssignment={showAddAssignment} deleteAssignment={deleteAssignment} />
             </div>
         </div>
     )

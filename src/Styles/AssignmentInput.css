@@ -1,0 +1,22 @@
+.assignment-input {
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    margin-left: 50px;
+}
+.input-item {
+    margin: 5px 0px;
+}
+.assignment-input-area {
+    margin-left: 20px;
+}
+.name-input {
+    margin-right: 65px;
+}
+.input-bottom {
+    display: flex;
+}
+.subject-input {
+    margin-right: 20px;
+}
