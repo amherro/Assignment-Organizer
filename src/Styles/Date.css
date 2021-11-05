@@ -8,10 +8,10 @@
     margin: 0px;
 } 
 .date-delete-btn {
-    margin-right: 55px;
+    margin-right: 125px;
 }
 .add-assignment-btn {
-    margin-left: 45px;
+    margin-left: 125px;
 }
 .flip-arrow-down {
     animation: flipArrowUp 0.5s forwards;

@@ -8,7 +8,7 @@ const Assignment = ({ name, subject, id, deleteAssignment }) => {
         setComplete(!complete)
     }
     return (
-        <div className='assignment-section'>
+        <div className='assignment'>
             <FaCheckCircle 
                 className={`complete-btn ${complete ? 'completed-btn-success' : ''}`}
                 onClick={handleSetComplete}

@@ -31,7 +31,7 @@ const Date = ({ date, id, deleteDate }) => {
         <div className='date-section'>
             <div className='add-assignment-top'>
                 <FaTimes style={{color:'red', cursor:'pointer'}} onClick={() => deleteDate(id)} className='date-delete-btn' />
-                <h5>{date}</h5>
+                <h4>{date}</h4>
                 <FaAngleDown className='add-assignment-btn' onClick={toggleAssignmentInput}></FaAngleDown>
             </div>
             <div className='assignment-display'>

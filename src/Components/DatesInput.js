@@ -18,8 +18,10 @@ const DatesInput = ({ addDate }) => {
     return (
         <form className='dates-input' onSubmit={submitDate}>
             <label className='input-label'>Please enter a new date...</label>
-            <input type='text' value={date} onChange={typeInDate} ></input>
-            <Button text='Submit' />
+            <div className='input-and-submit'>
+                <input className='date-input-area' type='text' value={date} onChange={typeInDate} ></input>
+                <Button text='Submit' />
+            </div>
         </form>
     )
 }

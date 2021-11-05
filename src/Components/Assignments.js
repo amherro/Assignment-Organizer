@@ -6,8 +6,17 @@ const Assignments = ({ assignments, addAssignment, showAddAssignment, deleteAssi
     
     return (
         <div>
-            {showAddAssignment && <AssignmentInput addAssignment={addAssignment} />}
-            <AssignmentDisplay assignments={assignments} deleteAssignment={deleteAssignment}  />
+             
+            {showAddAssignment && <div className='assignment-section'>
+                <AssignmentInput 
+                    addAssignment={addAssignment} 
+                /> 
+                <AssignmentDisplay 
+                    assignments={assignments} 
+                    deleteAssignment={deleteAssignment} 
+                />
+            </div>}
+            
         </div>
     )
 }

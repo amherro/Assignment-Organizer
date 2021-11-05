@@ -23,11 +23,10 @@ const AssignmentCalendar = () => {
 
     return (
         <main className="main-display">
-            <h3 className='calendar-title'>Assignment Calendar</h3>
             <div className='content-display'>
                 <div className='date-title-btn-grid'>
                     <div className='date-title-btn'>
-                        <h4 className="dates-title">Dates</h4>
+                        <h3 className="dates-title">Dates</h3>
                         <button className='add-date-btn' onClick={toggleDateInput}>Add Date</button>
                     </div>
                 </div>
