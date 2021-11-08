@@ -1,11 +1,12 @@
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import Assignment from './Assignment';
+import '../Styles/AssignmentDisplay.css'
 
 const AssignmentDisplay = ({ assignments, deleteAssignment }) => {
     
     return (
-        <div>
+        <div className='assignment-display'>
             {assignments.map((assignment) => {
                 return (
                     <Assignment 

@@ -2,13 +2,16 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    grid-row: 2;
 }
 .add-assignment-top {
     display: flex;
-    margin: 0px;
 } 
 .date-delete-btn {
     margin-right: 125px;
+}
+.date {
+    font-size: 25px;
 }
 .add-assignment-btn {
     margin-left: 125px;

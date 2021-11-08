@@ -24,14 +24,17 @@ const AssignmentCalendar = () => {
     return (
         <main className="main-display">
             <div className='content-display'>
-                <div className='date-title-btn-grid'>
+                <div className='date-title-input-grid'>
                     <div className='date-title-btn'>
                         <h3 className="dates-title">Dates</h3>
                         <button className='add-date-btn' onClick={toggleDateInput}>Add Date</button>
                     </div>
+                
+                    {showDateInput && <DatesInput className='display' dates={dates} addDate={addDate}/>}
                 </div>
-                {showDateInput && <DatesInput dates={dates} addDate={addDate}/>}
-                <DatesDisplay dates={dates} deleteDate={deleteDate} />
+                <div className='date-display-area'>
+                    <DatesDisplay dates={dates} deleteDate={deleteDate} />
+                </div>
             </div>
         </main>
     )

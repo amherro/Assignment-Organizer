@@ -1,6 +1,6 @@
 .dates-input {
-    grid-column: 2;
-    margin: 20px 70px 20px 0px;
+    grid-column: 1;
+    margin: 20px 70px 20px 60px;
     padding: 10px 20px;
     justify-items: center;
     display: flex;
