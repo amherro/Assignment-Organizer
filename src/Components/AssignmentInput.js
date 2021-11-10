@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Button from './Button';
 import { v4 as uuidv4 } from 'uuid';
+import { FaTimes } from 'react-icons/fa';
 import '../Styles/AssignmentInput.css'
 
 const AssignmentInput = ({ addAssignment }) => {
@@ -34,6 +35,7 @@ const AssignmentInput = ({ addAssignment }) => {
     }
     return (
         <form className='assignment-input' onSubmit={submitNewAssignment}>
+            <FaTimes className='close-menu-btn' />
             <label className='input-item'>Please enter a new assignment...</label>
             <div className='assignment-input-area'>
                 <input className='input-item name-input' type='text' maxLength='50' placeholder='Assignment name' value={assignment.name} onChange={handleAddName}></input>

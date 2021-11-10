@@ -17,6 +17,7 @@
 
 .date-title-btn {
     display: flex;
+    margin-left: 150px;
 }
 .dates-title {
     grid-column: 1;
