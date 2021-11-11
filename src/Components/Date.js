@@ -5,6 +5,7 @@ import '../Styles/Date.css';
 
 const Date = ({ date, id, deleteDate }) => {
     const [assignments, setAssignments] = useState([]);
+    const [showDateInfo, setShowDateInfo] = useState(false);
     const [showAddAssignment, setShowAddAssignment] = useState(false);
 
     const addAssignment = (assignment) => {
@@ -22,6 +23,9 @@ const Date = ({ date, id, deleteDate }) => {
     //         document.querySelector('.add-assignment-btn').classList.remove('flip-arrow-down')
     //     }
     // }
+    const toggleDateInfo = () => {
+        setShowDateInfo(!showDateInfo);
+    }
     const toggleAssignmentInput = () => {
         setShowAddAssignment(!showAddAssignment);
         // toggleOpenInput();
@@ -35,11 +39,11 @@ const Date = ({ date, id, deleteDate }) => {
             <div className='add-assignment-top'>
                 <FaTimes style={{color:'red', cursor:'pointer'}} onClick={() => deleteDate(id)} className='date-delete-btn' />
                 <h4 className='date'>{date}</h4>
-                <FaAngleDown className={`add-assignment-btn ${date}`} ></FaAngleDown>
+                <FaAngleDown className={`add-assignment-btn ${date}`} onClick={toggleDateInfo} ></FaAngleDown>
             </div>
-            <div className='assignment-display'>
+            {showDateInfo && <div className='assignment-display'>
                 <Assignments assignments={assignments} addAssignment={addAssignment} showAddAssignment={showAddAssignment} deleteAssignment={deleteAssignment} toggleAssignmentInput={toggleAssignmentInput} />
-            </div>
+            </div>}
         </div>
     )
 }

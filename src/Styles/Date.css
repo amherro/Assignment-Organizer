@@ -15,6 +15,7 @@
 }
 .add-assignment-btn {
     margin-left: 125px;
+    cursor: pointer;
 }
 .flip-arrow-down {
     animation: flipArrowUp 0.5s forwards;
