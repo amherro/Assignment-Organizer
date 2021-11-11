@@ -9,11 +9,11 @@ const Assignment = ({ name, subject, id, deleteAssignment }) => {
     }
     return (
         <div className='assignment'>
-            <FaCheckCircle 
-                className={`complete-btn ${complete ? 'completed-btn-success' : ''}`}
-                onClick={handleSetComplete}
-            />
             <div className={`assignment-card ${complete ? 'complete-card-success' : ''} `}>
+                <FaCheckCircle 
+                    className={`complete-btn ${complete ? 'completed-btn-success' : ''}`}
+                    onClick={handleSetComplete}
+                />
                 <div className='top-of-card'>
                     <p className='assignment-names'>
                         {name}

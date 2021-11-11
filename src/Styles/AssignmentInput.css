@@ -1,7 +1,7 @@
 .assignment-input {
     display: flex;
     flex-direction: column;
-    margin: 20px 30px 20px 40px;
+    margin: 20px 30px 20px 20px;
     padding: 10px 20px;
     border: 2px solid rgb(0, 0, 0);
 }
@@ -23,4 +23,10 @@
 .close-menu-btn {
     color: red;
     margin-right: 0px;
+    cursor: pointer;
+}
+.show-assignment-input {
+    margin: 20px 80px;
+    padding: 10px 20px;
+    cursor: pointer;
 }

@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { FaTimes } from 'react-icons/fa';
 import '../Styles/AssignmentInput.css'
 
-const AssignmentInput = ({ addAssignment }) => {
+const AssignmentInput = ({ addAssignment, showAddAssignment, toggleAssignmentInput }) => {
     const [assignment, setAssignment] = useState({
         name: '',
         subject: '',
@@ -34,8 +34,8 @@ const AssignmentInput = ({ addAssignment }) => {
         });
     }
     return (
-        <form className='assignment-input' onSubmit={submitNewAssignment}>
-            <FaTimes className='close-menu-btn' />
+        showAddAssignment ? <form className='assignment-input' onSubmit={submitNewAssignment}>
+            <FaTimes className='close-menu-btn' onClick={toggleAssignmentInput} />
             <label className='input-item'>Please enter a new assignment...</label>
             <div className='assignment-input-area'>
                 <input className='input-item name-input' type='text' maxLength='50' placeholder='Assignment name' value={assignment.name} onChange={handleAddName}></input>
@@ -44,7 +44,7 @@ const AssignmentInput = ({ addAssignment }) => {
                     <Button text='Submit' />
             </div>
             </div>
-        </form>
+        </form> : <button className='show-assignment-input' onClick={toggleAssignmentInput}>Add Assignment</button>
     )
 }
 

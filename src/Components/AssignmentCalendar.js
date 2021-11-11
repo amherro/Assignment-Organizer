@@ -29,7 +29,6 @@ const AssignmentCalendar = () => {
                         <h3 className="dates-title">Dates</h3>
                         <button className='add-date-btn' onClick={toggleDateInput}>Add Date</button>
                     </div>
-                
                     {showDateInput && <DatesInput className='display' dates={dates} addDate={addDate}/>}
                 </div>
                 <div className='date-display-area'>

@@ -10,18 +10,21 @@ const Date = ({ date, id, deleteDate }) => {
     const addAssignment = (assignment) => {
         setAssignments(assignments.concat(assignment))
     }
-    const toggleOpenInput = () => {
-        if(showAddAssignment) {
-            document.querySelector('.add-assignment-btn').classList.add('flip-arrow-down')
-            document.querySelector('.add-assignment-btn').classList.remove('flip-arrow-up')
-        } else {
-            document.querySelector('.add-assignment-btn').classList.add('flip-arrow-up')
-            document.querySelector('.add-assignment-btn').classList.remove('flip-arrow-down')
-        }
-    }
+    // const toggleOpenInput = () => {
+    //     if(showAddAssignment) {
+    //         // document.querySelector('.add-assignment-btn').style.animation = 'animation: flipArrowUp 0.5s forwards;'
+
+    //         document.querySelector('.add-assignment-btn').classList.add('flip-arrow-down')
+    //         document.querySelector('.add-assignment-btn').classList.remove('flip-arrow-up')
+    //     } else {
+    //         // document.querySelector('.add-assignment-btn').style.animation = 'animation: flipArrowDown 0.5s forwards;'
+    //         document.querySelector('.add-assignment-btn').classList.add('flip-arrow-up')
+    //         document.querySelector('.add-assignment-btn').classList.remove('flip-arrow-down')
+    //     }
+    // }
     const toggleAssignmentInput = () => {
         setShowAddAssignment(!showAddAssignment);
-        toggleOpenInput();
+        // toggleOpenInput();
     }
     const deleteAssignment = (id) => {
         setAssignments(assignments.filter((assignment) => assignment.id !== id))
@@ -32,10 +35,10 @@ const Date = ({ date, id, deleteDate }) => {
             <div className='add-assignment-top'>
                 <FaTimes style={{color:'red', cursor:'pointer'}} onClick={() => deleteDate(id)} className='date-delete-btn' />
                 <h4 className='date'>{date}</h4>
-                <FaAngleDown className='add-assignment-btn' onClick={toggleAssignmentInput}></FaAngleDown>
+                <FaAngleDown className={`add-assignment-btn ${date}`} ></FaAngleDown>
             </div>
             <div className='assignment-display'>
-                <Assignments assignments={assignments} addAssignment={addAssignment} showAddAssignment={showAddAssignment} deleteAssignment={deleteAssignment} />
+                <Assignments assignments={assignments} addAssignment={addAssignment} showAddAssignment={showAddAssignment} deleteAssignment={deleteAssignment} toggleAssignmentInput={toggleAssignmentInput} />
             </div>
         </div>
     )
