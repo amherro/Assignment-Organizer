@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Button from './Button';
 import { v4 as uuidv4 } from 'uuid';
 import { FaTimes } from 'react-icons/fa';
 import '../Styles/AssignmentInput.css'
@@ -41,7 +40,7 @@ const AssignmentInput = ({ addAssignment, showAddAssignment, toggleAssignmentInp
                 <input className='input-item name-input' type='text' maxLength='50' placeholder='Assignment name' value={assignment.name} onChange={handleAddName}></input>
                 <div className='input-bottom'>
                     <input className='input-item subject-input' type='text' maxLength='50' placeholder='Subject' value={assignment.subject} onChange={handleAddsubject}></input>
-                    <Button text='Submit' />
+                    <button className='submit-new-assingment'>Submit</button>
             </div>
             </div>
         </form> : <button className='show-assignment-input' onClick={toggleAssignmentInput}>Add Assignment</button>

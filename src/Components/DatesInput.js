@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Button from './Button'
 import '../Styles/DatesInput.css'
 
 const DatesInput = ({ addDate }) => {
@@ -20,7 +19,7 @@ const DatesInput = ({ addDate }) => {
             <label className='input-label'>Please enter a new date...</label>
             <div className='input-and-submit'>
                 <input className='date-input-area' type='text' value={date} onChange={typeInDate} ></input>
-                <Button text='Submit' />
+                <button className='add-date-btn'>Submit</button>
             </div>
         </form>
     )

@@ -13,17 +13,22 @@
 }
 .name-input {
     margin-right: 65px;
+    padding: 2px 5px;
 }
 .input-bottom {
     display: flex;
 }
 .subject-input {
     margin-right: 20px;
+    padding: 2px 5px;
 }
 .close-menu-btn {
     color: red;
     margin-right: 0px;
     cursor: pointer;
+}
+.submit-new-assingment {
+    padding: 5px;
 }
 .show-assignment-input {
     margin: 20px 80px;
