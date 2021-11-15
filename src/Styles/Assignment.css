@@ -16,7 +16,8 @@
 }
 .assignment-card {
     width: 270px;
-    height: 70px;
+    height: 80px;
+    max-height: 80px;
     line-height: 30px;
     display: flex;
     align-items: baseline;
@@ -61,4 +62,5 @@
     text-align: left;
     margin-left: 5px;
     background-color: rgb(201, 201, 201);
+    line-height: 20px;
 }
