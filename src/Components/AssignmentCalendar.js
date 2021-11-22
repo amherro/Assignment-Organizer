@@ -4,7 +4,7 @@ import DatesInput from './DatesInput';
 import DatesDisplay from './DatesDisplay';
 import '../Styles/AssignmentCalendar.css'
 
-const AssignmentCalendar = () => {
+const AssignmentCalendar = (isOpen) => {
     const [dates, setDates] = useState([]);
     const [showDateInput, setShowDateInput] = useState(false);
     
@@ -41,10 +41,11 @@ const AssignmentCalendar = () => {
         <main className="main-display">
             <div className='content-display'>
                 <div className='date-title-input-grid'>
-                    <div className='date-title-btn'>
+                    
+                    {isOpen && <div className='date-title-btn'>
                         <h3 className="dates-title">Dates</h3>
                         <button className='add-date-btn' onClick={toggleDateInput}>Add Date</button>
-                    </div>
+                    </div>}
                     {showDateInput && <DatesInput className='display' dates={dates} addDate={addDate}/>}
                 </div>
                 <div className='date-display-area'>
